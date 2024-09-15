@@ -4,9 +4,14 @@
 monthly_income = input ("Enter your monthly income:")
 monthly_expenses = input ("Enter your total monthly expenses:")
 
+# convert the string from the input to float
+
+monthly_income = float(monthly_income)
+monthly_expenses = float(monthly_expenses)
+
 # calculate the monthly savings after expenses
 
-monthly_savings = int(monthly_income) - int(monthly_expenses)
+monthly_savings = monthly_income - monthly_expenses
 
 # assign the variable 'interest' a fixed value of 5% annually
 # calculate the projected savings after one year, adding the interest.

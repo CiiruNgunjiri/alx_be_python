@@ -9,7 +9,7 @@ seconds_per_hour = minutes_per_hour * seconds_per_minute
 
 # calculate the seconds found in the variable 'hours'
 
-seconds = hours * minutes_per_hour * seconds_per_minute
+seconds = hours * 3600
 
 # print the calculated seconds in the format: [hours]hour(s) is [seconds] seconds.
 
