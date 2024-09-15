@@ -10,11 +10,11 @@
 # rate with a value of 0.05 representing 5% annual interest rate
 # time with a value of 3 representing 3 years
 
-principle = 1000
+principal = 1000
 rate = 0.05
 time = 3
 
-interest = principle * rate * time
+interest = principal * rate * time
 
 # print the calculated interest in the format: The simple interest is: [interest]
 
