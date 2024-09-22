@@ -1,7 +1,6 @@
 #ask the user to input current weather condition
 
-user = input("What's the weather like today? (sunny/rainy/cold):")
-weather = user
+weather = input("What's the weather like today? (sunny/rainy/cold):")
 
 #set conditions for different types of weather
 
