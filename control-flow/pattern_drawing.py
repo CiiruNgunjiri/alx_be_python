@@ -1,4 +1,4 @@
-#using nested loops to print a square pattern
+#script using nested loops to print a square pattern
 
 #enter a positive integer 
 user = int(input('Enter the size of the pattern: '))

@@ -6,10 +6,13 @@ weather = user
 #set conditions for different types of weather
 
 if weather == 'sunny':
-    print ('Wear a t-shirt and sunglasses.')
+    recommendation = 'Wear a t-shirt and sunglasses.'
 elif weather == 'rainy':
-    print ("Don't forget your umbrella and a raincoat.")   
+    recommendation = "Don't forget your umbrella and a raincoat."   
 elif weather == 'cold':
-    print ('Make sure to wear a warm coat and a scarf.') 
+    recommendation = 'Make sure to wear a warm coat and a scarf.' 
 else:
-    print ("Sorry, I don't have recommendations for this weather.")       
+    recommendation = "Sorry, I don't have recommendations for this weather."       
+
+#print the output of the recommendation
+print (recommendation)
