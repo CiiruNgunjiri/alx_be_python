@@ -21,7 +21,10 @@ match operation:
     case _:
         result = print('Invalid result')
 
-#print out the result in the format below        
-     
-print (f'The result is {result}.') 
+#print out the result in the format below      
+
+if isinstance(result, str):
+    print (result) #error message output
+else:    
+     print (f'The result is {result}.') 
         
