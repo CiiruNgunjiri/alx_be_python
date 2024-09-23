@@ -1,8 +1,8 @@
 #script that uses conditions and match cases to remind user about priority tasks for the day
 
-task = input('Enter the task description: ')
-priority = input("Enter the task's priority (high/medium/low): ")
-time_bound = input('Is the task time-bound? (yes/no): ')
+task = input('Enter your task: ')
+priority = input("Priority (high/medium/low): ")
+time_bound = input('Is it time-bound? (yes/no): ')
 
 task = task
 priority = priority
@@ -14,6 +14,7 @@ time_bound = time_bound
 match priority:
     case "high":
         reminder = (f"'{task}', is a high priority task.")
+        print (reminder)
         if priority == 'high' and time_bound == 'yes':
             print(f'{reminder} It requires immediate attention today!')
         elif priority == 'high' and time_bound != 'yes':
