@@ -11,21 +11,22 @@ operation = input('Choose the operation (+, -, *, /): ')
 match operation:
     case '+':
         result = num1 + num2
-        print (f'The result is {result}.') 
+        print(f'The result is {result}.') 
     case '-':
         result = num1 - num2
-        print (f'The result is {result}.') 
+        print(f'The result is {result}.') 
     case '*':
           result = num1 * num2
-          print (f'The result is {result}.') 
+          print(f'The result is {result}.') 
     case '/':
         if num2 == 0: #user should not divide by zero
             result = print('Division by zero is not allowed')
         else: 
             result = num1 / num2
-            print (f'The result is {result}.') 
+            print(f'The result is {result}.') 
     case _:
-        result = print('Invalid result')
+        result = 'Invalid result'
+        print(result)
 
  
    
