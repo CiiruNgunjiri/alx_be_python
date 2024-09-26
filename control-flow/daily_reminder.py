@@ -15,8 +15,9 @@ match priority:
     case "high":
         reminder = (f"'{task}', is a high priority task.")
         if time_bound == 'yes':
-            print(f'{reminder} It requires immediate attention today!')
-        elif priority == 'high' and time_bound != 'yes':
+            customized = 'It requires immediate attention today!'
+            print(f" {reminder} {customized}")
+        elif time_bound != 'yes':
             print(f"{reminder} You should do it as soon as possible!")
         else:
             print(reminder)
