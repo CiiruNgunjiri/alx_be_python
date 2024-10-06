@@ -40,14 +40,14 @@ class Library:
 
     def check_out_book(self, title):
         """Check out a book by its title."""
-        for book in self._books:
+        for book in self.book:
             if book.title == title:
                
                 print(f"Book '{title}' not found in the library.")
 
     def return_book(self, title):
         """Return a book by its title."""
-        for book in self._books:
+        for book in self.book:
             if book.title == title:
                 print(f"Returned '{title}'.")
             elif book.check_out():
@@ -57,10 +57,11 @@ class Library:
 
     def list_available_books(self):
         """List all available books in the library."""
-        available_books = [book for book in self._books if book.is_available()]
+        available_books = [book for book in self.book if book.is_available()]
         
         if available_books:
             for book in available_books:
                 print(book)
         else:
             print("No available books in the library.")
+
