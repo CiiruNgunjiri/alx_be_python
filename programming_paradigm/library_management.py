@@ -34,18 +34,18 @@ class Library:
     def __init__(self):
         self._books = []  # Private list to store instances of Book
 
-    def add_book(self, book):
+    def add_book(self):
         """Add a new book to the library."""
         self._books.append(book)
 
-    def check_out_book(self, title):
+    def check_out_book(self):
         """Check out a book by its title."""
         for book in self.book:
             if book.title == title:
                
                 print(f"Book '{title}' not found in the library.")
 
-    def return_book(self, title):
+    def return_book(self):
         """Return a book by its title."""
         for book in self.book:
             if book.title == title:
