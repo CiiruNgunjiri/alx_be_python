@@ -30,6 +30,12 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(-1, 5), -5)
         self.assertEqual(self.calc.multiply(0, 10), 0)
 
+    def test_multiplication(self):
+        """Test mutliplication with different cases"""
+        self.assertEqual(self.calc.multiply(3, 4), 12)
+        self.assertEqual(self.calc.multiply(-1, 5), -5)
+        self.assertEqual(self.calc.multiply(0, 10), 0)
+
     def test_divide(self):
         """Test the division operation."""
         self.assertEqual(self.calc.divide(10, 2), 5)
