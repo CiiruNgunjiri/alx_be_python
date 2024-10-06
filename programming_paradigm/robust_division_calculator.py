@@ -7,24 +7,24 @@ def safe_divide(numerator, denominator):
 
    except ValueError:
         
-        raise ValueError("Both numerator and denominator must be numeric values.")
+        raise ValueError("Please enter numeric values only.")
       
 #raise an error if denominator is equal to 0
    if denominator == 0:
 
-      raise ZeroDivisionError ("the denominator cannot be zero")
-  
-   else:
-  
-      return numerator / denominator
+      raise ZeroDivisionError ("Cannot divide by zero.")
+   
+   return numerator / denominator
+
      
 try:
    numerator = input('Enter numerator: ')
    denominator = input('Enter denominator: ')
     
    result = safe_divide(numerator, denominator)
-   print(f"Result: {result}")
+
+   print(f"The result of the division is " f'{result:.1f}')
 except ZeroDivisionError as e:
    print(f"Error: {e}")  # Handle division by zero
 except ValueError as ve:
-   print(f"Value Error: {ve}")  # Handle non-numeric input errors
+   print(f"Error: {ve}")  # Handle non-numeric input errors
