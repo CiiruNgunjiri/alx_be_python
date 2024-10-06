@@ -33,6 +33,17 @@ class TestSimpleCalculator(unittest.TestCase):
         # Test division by zero
         with self.assertRaises(ZeroDivisionError):
             self.calc.divide(self, 0)
+        with self.assertRaises(ValueError):
+            self.calc.divide(10, 0)
+
+    def test_divide_with_none(self):
+        """Test division with None as an argument."""
+        with self.assertRaises(TypeError):
+            self.calc.divide(None, 5)
+
+        with self.assertRaises(TypeError):
+            self.calc.divide(10, None)
+
         
 
 if __name__ == "__main__":
