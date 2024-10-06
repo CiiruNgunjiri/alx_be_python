@@ -6,7 +6,7 @@ def main():
         print("Usage: python main.py <numerator> <denominator>")
         sys.exit(1)
 
-    numerator = sys.argv[1]
+    numerator = sys.argv[1] 
     denominator = sys.argv[2]
 
     result = safe_divide(numerator, denominator)
