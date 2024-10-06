@@ -34,12 +34,13 @@ class BankAccount:
         Parameters:
             amount (float): The amount to withdraw.
         """
-        if 0 < amount <= self.account_balance:
+        if amount <= self.account_balance:
             self.account_balance -= amount
-                  
+            return True
         else:
-            print("Amount must be less than or equal to the current balance.")
-    
+            return False
+                  
+            
     def display_balance(self):
         """
     Prints the current account balance in a user-friendly format.
