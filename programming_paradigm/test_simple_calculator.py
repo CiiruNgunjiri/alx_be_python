@@ -40,6 +40,11 @@ class TestSimpleCalculator(unittest.TestCase):
         """Test the division operation."""
         self.assertEqual(self.calc.divide(10, 2), 5)
         self.assertEqual(self.calc.divide(-10, -2), 5)
+
+    def test_division(self):
+        """Test the division operation."""
+        self.assertEqual(self.calc.divide(10, 2), 5)
+        self.assertEqual(self.calc.divide(-10, -2), 5)
         
         # Test division by zero
         with self.assertRaises(ZeroDivisionError):
