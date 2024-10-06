@@ -42,23 +42,18 @@ class Library:
         """Check out a book by its title."""
         for book in self._books:
             if book.title == title:
-                if book.check_out():
-                    print(f"Checked out '{title}'.")
-                else:
-                    print(f"'{title}' is already checked out.")
-                return
-        print(f"Book '{title}' not found in the library.")
+               
+                print(f"Book '{title}' not found in the library.")
 
     def return_book(self, title):
         """Return a book by its title."""
         for book in self._books:
             if book.title == title:
-                if book.return_book():
-                    print(f"Returned '{title}'.")
-                else:
-                    print(f"'{title}' was not checked out.")
-                return
-        print(f"Book '{title}' not found in the library.")
+                print(f"Returned '{title}'.")
+            elif book.check_out():
+                print(f"'{title}' was not checked out.")
+            else:        
+                print(f"Book '{title}' not found in the library.")
 
     def list_available_books(self):
         """List all available books in the library."""
