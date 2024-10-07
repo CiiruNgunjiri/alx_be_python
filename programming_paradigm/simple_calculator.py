@@ -17,16 +17,7 @@ class SimpleCalculator:
 
     def divide(self, a, b):
         """Return the division of a by b. Returns None if b is zero."""
-    
         if b == 0:
-            raise ValueError("Cannot divide by zero.")
-        if a is None or b is None:
-            raise TypeError("Inputs cannot be None.")
-        try:
-            return a / b
-        except TypeError:
-            raise TypeError("Inputs must be numeric.")
-
-        else:
-            return a / b
+            return None
+        return a / b
     
