@@ -10,9 +10,8 @@ class Book:
         """Check out the book, marking it as unavailable."""
         if self._is_checked_out:
             return False  # Book is already checked out
-        else:
-            self._is_checked_out = True
-            return True
+        self._is_checked_out = True
+        return True
 
     def return_book(self):
         """Return the book, marking it as available."""
@@ -34,34 +33,38 @@ class Library:
     def __init__(self):
         self._books = []  # Private list to store instances of Book
 
-    def add_book(self):
+    def add_book(self, book):
         """Add a new book to the library."""
         self._books.append(book)
 
-    def check_out_book(self):
+    def check_out_book(self, title):
         """Check out a book by its title."""
-        for book in self.book:
+        for book in self._books:
             if book.title == title:
-               
-                print(f"Book '{title}' not found in the library.")
+                if book.check_out():
+                    print(f"Checked out '{title}'.")
+                else:
+                    print(f"'{title}' is already checked out.")
+                return
+        print(f"Book '{title}' not found in the library.")
 
-    def return_book(self):
+    def return_book(self, title):
         """Return a book by its title."""
-        for book in self.book:
+        for book in self._books:
             if book.title == title:
-                print(f"Returned '{title}'.")
-            elif book.check_out():
-                print(f"'{title}' was not checked out.")
-            else:        
-                print(f"Book '{title}' not found in the library.")
+                if book.return_book():
+                    print(f"Returned '{title}'.")
+                else:
+                    print(f"'{title}' was not checked out.")
+                return
+        print(f"Book '{title}' not found in the library.")
 
     def list_available_books(self):
         """List all available books in the library."""
-        available_books = [book for book in self.book if book.is_available()]
+        available_books = [book for book in self._books if book.is_available()]
         
         if available_books:
             for book in available_books:
                 print(book)
         else:
             print("No available books in the library.")
-
