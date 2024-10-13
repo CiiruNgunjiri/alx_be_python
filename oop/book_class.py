@@ -2,7 +2,7 @@
 
 class Book:
     
-    def __init__(self, title, author, year):
+    def __init__(self, title: str, author: str, year: int):
         self.title = title #title of the book
         self.author = author #author of the book
         self.year = year #year of publication of the book
